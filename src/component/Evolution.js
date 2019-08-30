@@ -16,7 +16,6 @@ const Evolution = (props) => {
   const {evolution, all} = props;
   const direction = Object.keys(evolution)[0].replace('_', ' ');
   const pokemon = all[Object.values(evolution)[0]];
-  console.log(pokemon);
 
   return (
     <Theme>

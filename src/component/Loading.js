@@ -1,15 +1,13 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import pokeball from 'assets/poke-ball.png';
-import greatball from 'assets/great-ball.png';
-import ultraball from 'assets/ultra-ball.png';
-import masterball from 'assets/master-ball.png';
+
+import masterball from 'assets/pokeball.gif';
 
 const size = 80;
 const pokeballSize = 30;
 
-const pokeballs = [pokeball, greatball, ultraball, masterball];
+const pokeballs = [masterball];
 
 const LoadingWrapper = styled.div`
   position: fixed;

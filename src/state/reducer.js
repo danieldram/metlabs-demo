@@ -16,7 +16,6 @@ const defaultState = {
 };
 
 export default (state = defaultState, action) => {
-  console.log(action);
   switch (action.type) {
     case types.FILTER:
     case types.FETCH_ALL:

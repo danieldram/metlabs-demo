@@ -7,10 +7,10 @@ import {X} from 'react-feather';
 
 import Evolution from '/component/Evolution';
 import Type from '/component/Type';
+import pokeball from 'assets/pokeball.gif';
 
 import {colors} from '/config';
 import {actions} from '/state';
-
 const Content = styled.div`
   padding: 10px;
   background: white;
@@ -40,7 +40,14 @@ const CloseButton = styled(X)`
     color: ${colors.primary};
   }
 `;
-
+const LoadingGif = styled.div`
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  img {
+    max-width: 100%;
+  }
+`;
 const NoEvolutionText = styled.div`
   margin-top: 16px;
 `;
@@ -55,7 +62,11 @@ class DetailsPopover extends React.PureComponent {
     const {evolutions, fetchingEvolutions, all} = this.props;
     // TODO: Add loading state while the request is happening
     if (fetchingEvolutions) {
-      return <NoEvolutionText>loading...</NoEvolutionText>;
+      return (
+        <LoadingGif>
+          <img src={pokeball} alt="pokeball" />
+        </LoadingGif>
+      );
     }
 
     if (!evolutions.length) {
@@ -64,7 +75,11 @@ class DetailsPopover extends React.PureComponent {
 
     return evolutions.map((evolution) => {
       return (
-        <Evolution evolution={evolution} all={all} key={Object.values(evolution)[0]} />
+        <Evolution
+          evolution={evolution}
+          all={all}
+          key={Object.values(evolution)[0]}
+        />
       );
     });
   }

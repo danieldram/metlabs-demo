@@ -1,0 +1,15 @@
+extends:
+  - metalab
+env:
+  browser: true
+rules:
+  complexity: 0
+globals:
+  module: false
+  require: false
+  process: false
+  global: false
+  __dirname: false
+  __DEV__: false
+  __webpack_public_path__: false
+  API_ROOT: false

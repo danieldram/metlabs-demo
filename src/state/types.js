@@ -1,0 +1,4 @@
+export const FETCH_ALL = 'POKEMON::FETCH_ALL';
+export const FILTER = 'POKEMON::FILTER';
+export const FETCH_EVO = 'POKEMON::FETCH_EVO';
+export const FETCHING_EVOS = 'POKEMON::FETCHING_EVOS';
